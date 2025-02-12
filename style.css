@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Bebas Neue", serif;;
+    
+}
+    /*ESTE ES EL MENU*/
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #8928c1;
+    box-shadow: 0 4px 25px -22px black;
+    z-index: 2;
+}
+
+.header-content{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 60px;
+}
+
+.logo h1 b{
+    color:rgb(255, 255, 255);
+    font-size: 48px;
+}
+
+.menu{
+    height: 80px;
+
+}
+
+.menu nav{
+    height: 100%;
+}
+
+.menu nav ul{
+    height: 100%;
+    display: flex;
+    list-style: none;
+}
+
+.menu nav ul li{
+    height: 100%;
+    margin: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 30px;
+}
+
+
+.menu nav ul li a{
+    color:#ffffff;
+    transition: color 300ms;
+}
+
+.menu nav ul li a:hover{
+    color:#f87dff
+}
+
+/*ESTA ES LA PORTADA XD-Esto es de los ejercicios mas basicos de HTML agregue una linea con rgba para sobreponerla 
+en la imagen de PELEA.jpg acomode primero la imagen y se repetia 6 veces asi que agregue un "no-repeat" y la centre
+a lo largo de la pagina realmente eso fue lo facil la posicion la tuve que poner absoluta y al texto en z-index
+para poder sobreponerlo ya que las letras quedaban como jamon en sanwich enmedio de la imagen y de la linea ojo 
+la linea no es necesaria es mera estetica con que se elimine el cover:before no afecta al codigo ya lo*/
+
+.container-cover{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image:url(img/PELEA.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container-cover::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(205, 113, 255, 0.577);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.container-present{
+    max-width: 800px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.container-present h1{
+    font-size: 60px;
+    font-weight: 500;
+    color:#ffffff;
+    margin-bottom: 20px;
+}
+
+.container-present p{
+    color:#ffffff;
+    font-size: 20px;
+}
+
+/*ESTO ES EL INICIO-Esto esta relacionado con "CAJITA BEBE" Estan hechas en el mismo contenedor INICIO La verdad
+nunca he sido nada bueno acomodando textos con <p> y <br> no se porque jajaja por eso casi siempre pido la opinion
+de alguien al momento de repartir el texto en la pagina, con este no me complique mucho tambien primero en el 
+codigo html agregue los titulos, textos y las imagenes, para no confundirme use la palabra article y ya solamente
+modifique la letra y la fuente desde google font el link de la fuente (url) esta hasta la parte de arriba del 
+css se perfectamente que la pude haber agregado mas atras pero no se porque me dieron ganas de cambiar la fuente aqui
+me parecia muy fea la predeterminada esto es facil se crea el espacio de trabajo desiganando el espacio ademas
+agregue una linea coqueta en la parte de arriba la vdd me gusto jajajaja pensaba agregarla a las "CAJITAS BB" pero
+me dio flojera y ademas siento que no se le verian bien realmente es solo un ajuste de texto con el truco de la cajita
+OJO EL TRUCO DE LA CAJA ES LA PARTE DONDE DICE "ARTICLE" tuve que agregar un border-radius:hidden por estetica y ademas
+porque me generaba un problema con la linea realmente no entiendo porque*/
+
+.container-inicio{
+    width: 1200px;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+
+}
+article{
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 40px;
+    box-shadow: -10px 0 20px -30px black;
+    position: relative;
+    border-radius: hidden;
+}
+article:before{
+    content: '';
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #f87dff;
+
+}
+
+
+article h1{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+article p{
+    margin-top: 20px;
+    font-size: 18px;
+    color: rgb(58, 58, 58);
+}
+article img{
+    width: 100%;
+}
+
+
+/*CAJITA BEBE-Realmente no me complique tanto con las cajitas fueron de lo mas sencillas en el primer contenedor
+esta la sombra que se hace gracias al box-shadow ese truco no lo enseño un  maestro decia que "hacia como que
+flotaban los recuadros en la pagina", despues solo adapte las imagenes al recuadro con un width (QUE CONSEJO
+PARA TODOS LOS QUE EMPIECEN A PROGRAMAR, SI YA DESIGNASTE UN ESPACIO EN TU PAGINA PARA ALGUNA IMAGEN UTILIZA EL
+WIDTH Q MUCHA GENTE LO INTENTA ACOMODAR ADIVINANDO LOS PIXELES) el resto de cosas fue simplemente para acomodar
+los recuadros en su lugar y darle vida a los botones ademas de darle un efecto de opaco al pasar el cursor, no
+es de los mejores trabajos pero por el tiempo en el que lo hice no esta nada mal*/
+
+.container-bebe aside{
+    width: 320px;
+    box-shadow:0 0 20px -20px black;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+
+.container-bebe aside img{
+    width: 100%;
+}
+
+.container-bebe aside h2,
+.container-bebe aside p{
+    margin-top: 20px;
+    padding: 0px 20px;
+}
+
+.container-bebe aside a button{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 50px;
+    font-size: 16px;
+    background: #eec8f0;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.container-bebe aside a button:hover{
+    opacity: 0.9;
+}
